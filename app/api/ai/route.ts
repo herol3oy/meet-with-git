@@ -23,7 +23,7 @@ export async function POST(request: Request): Promise<Response> {
         - GitHub user 1: ${JSON.stringify(users[0])}
         - GitHub user 2: ${JSON.stringify(users[1])}
         
-        Make sure the conversation reflects their personalities, interests, or projects — and have one of the users respond in an arrogant, nose-up manner for extra humor.`,
+        Make sure the conversation reflects their personalities, interests, or projects — and make one of the users fire back with a gloriously smug, nose-in-the-air retort to crank up the comedy.`,
         },
       ],
       temperature: 0.8,
