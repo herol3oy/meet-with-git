@@ -1,10 +1,11 @@
 import { Container } from '@mui/material'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
 import type { Metadata } from 'next'
+import TopBar from './components/TopBar'
 
 export const metadata: Metadata = {
-  title: 'Git Besties',
-  description: 'Find who is your github best friend!?',
+  title: 'Meet With Git',
+  description: 'Have a funny conversation with any Github user.',
 }
 
 export default function RootLayout({
@@ -16,7 +17,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <AppRouterCacheProvider>
-          <Container maxWidth="sm">{children}</Container>
+          <Container maxWidth={'sm'}>
+            <TopBar />
+            {children}
+          </Container>
         </AppRouterCacheProvider>
       </body>
     </html>
