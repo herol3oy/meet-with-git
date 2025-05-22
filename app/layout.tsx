@@ -1,6 +1,7 @@
 import { Container } from '@mui/material'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
 import type { Metadata } from 'next'
+import Footer from './components/Footer'
 import TopBar from './components/TopBar'
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({
           <Container maxWidth={'sm'}>
             <TopBar />
             {children}
+            <Footer />
           </Container>
         </AppRouterCacheProvider>
       </body>
