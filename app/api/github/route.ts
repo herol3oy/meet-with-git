@@ -1,5 +1,5 @@
-import { GITHUB_GRAPHQL_BASE_URL_API } from '@/consts/github-graphql-base-url-api'
-import { SEARCH_USERS_QUERY } from '@/search-users-query'
+import { GITHUB_GRAPHQL_API_URL } from '@/consts/github-graphql-base-url-api'
+import { SEARCH_USERS_QUERY } from '@/consts/search-users-query'
 
 export async function POST(request: Request): Promise<Response> {
   try {
@@ -9,7 +9,7 @@ export async function POST(request: Request): Promise<Response> {
       return Response.json([])
     }
 
-    const response = await fetch(GITHUB_GRAPHQL_BASE_URL_API, {
+    const response = await fetch(GITHUB_GRAPHQL_API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
