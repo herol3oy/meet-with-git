@@ -1,1 +1,1 @@
-# Git Besties
+# Meet with Git
