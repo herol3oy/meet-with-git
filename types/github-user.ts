@@ -1,19 +1,5 @@
-interface TotalCount {
-  totalCount: number
-}
-
-interface PrimaryLanguage {
-  id: string
-  name: string
-}
-
-interface Repository {
-  id: string
-  name: string
-  description: string | null
-  stargazerCount: number
-  primaryLanguage: PrimaryLanguage | null
-}
+import { Repository } from './repository'
+import { TotalCount } from './total-count'
 
 export interface GithubUser {
   id: string
