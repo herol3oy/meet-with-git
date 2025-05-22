@@ -1,1 +1,1 @@
-export const GITHUB_GRAPHQL_BASE_URL_API = 'https://api.github.com/graphql'
+export const GITHUB_GRAPHQL_API_URL = 'https://api.github.com/graphql'

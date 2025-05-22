@@ -1,6 +1,6 @@
 import { GithubUser } from '@/types/github-user'
 
-export const defaultValue: GithubUser = {
+export const DEFAULT_VALUE: GithubUser = {
   id: '1024025',
   login: 'torvalds',
   name: 'Linus Torvalds',
