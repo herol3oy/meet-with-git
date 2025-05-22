@@ -10,13 +10,19 @@ import Chip from '@mui/material/Chip'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
-export default async function Page({ params }: { params: { id: string } }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}) {
+  const { id } = await params
+
   const supabase = await createClient()
 
   const { data: conversation, error } = await supabase
     .from('shared_conversations')
     .select('*')
-    .eq('id', params.id)
+    .eq('id', id)
     .single<SharedConversation>()
 
   if (error || !conversation) {
