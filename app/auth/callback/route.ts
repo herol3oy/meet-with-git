@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@/utils/supabase/server'
 
+// This is required for static exports to GitHub Pages
+export const dynamic = 'force-dynamic'
+
 export async function GET(request: Request): Promise<Response> {
   const { searchParams, origin } = new URL(request.url)
   
